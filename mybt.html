@@ -101,3 +101,30 @@
     <h2>Useful Links</h2>
     <a href="#mybt">ฟอร์ม</a>    
     <a href="index.html"> | HOME </a><br>  
+
+    <!-- Toast Container -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast" role="alert" id="myToast">
+        <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>Just now</small>
+            <button type="button" class="btn-close" 
+                    data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Hello! This is a toast message.
+        </div>
+    </div>
+</div>
+
+<!-- Button to show toast -->
+<button class="btn btn-primary" onclick="showToast()">
+    Show Toast
+</button>
+
+<script>
+function showToast() {
+    const toast = new bootstrap.Toast(document.getElementById('myToast'));
+    toast.show();
+}
+</script>
